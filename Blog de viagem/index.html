@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Aventuras</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Minhas Aventuras - Um blog sobre viagens ao redor do mundo. Explore destinos como Chapada dos Veadeiros, Pyongyang e Ouro Preto.">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Minhas Aventuras</h1>
+            <nav aria-label="Menu principal">
+                <ul class="nav-links">
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#aventuras">Aventuras</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="sobre" class="section">
+        <div class="container">
+            <h2>Sobre Mim</h2>
+            <p>Olá! Sou uma viajante apaixonada que deseja compartilhar minhas aventuras ao redor do mundo.😊</p>
+        </div>
+    </section>
+
+    <section id="aventuras" class="section">
+        <div class="container">
+            <div class="aventuras-grid">
+                <div class="aventura-item">
+                    <img src="chapadaDosVeadeitos.jpg" alt="Parque Nacional da Chapada dos Veadeiros, está localizado no nordeste do Estado de Goiás." width="700">
+                    <h3>Chapada dos Veadeiros</h3>
+                    <p>Aventuras e trilhas.</p>
+                </div>
+                <div class="aventura-item">
+                    <img src="pyongyang.jpg" alt="Capital da Coreia do Norte." width="700">
+                    <h3>Pyongyang</h3>
+                    <p>Um destino desconhecido.</p>
+                </div>
+                <div class="aventura-item">
+                    <img src="ouroPreto.jpg" alt="Município brasileiro localizado no estado de Minas Gerais, na Região Sudeste do país." width="700">
+                    <h3>Ouro Preto</h3>
+                    <p>Monumentos históricos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Contato" class="sectionContato">
+        <h2>Contato</h2>
+        <p>Deseja entrar em contato ? Caso sim, por gentileza, preencha o formulário abaixo.</p>
+        <form action="https://formsubmit.co/monalisasb91@gmail.com" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" placeholder="Seu nome" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" name="email" placeholder="Seu email" required>
+            
+            <label for="mensagem">Mensagem:</label>
+            <textarea name="Mensagem" rows="4" placeholder="Sua mensagem"></textarea>
+            
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+    </section>
+
+    <br>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Monalisa Silva - Desafio Capacita Brasil (FSN6) - Minhas aventuras. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
