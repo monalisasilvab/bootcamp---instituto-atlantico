@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Passo Certo</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <!-- Logotipo -->
+            <div class="logo">
+                <img src=".\imgs\logotipo.jpg" alt="Logotipo da Loja Fictícia">
+            </div>
+            
+            <br>
+            <!-- Menu de Navegação -->
+            <nav class="nav">
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#sobre-nos">Sobre Nós</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#carrinho">Carrinho</a></li>
+                </ul>
+            </nav>
+            
+            <br>
+            <!--Sobre Nós-->
+            <div class="sobre">
+                <h2>Sobre nós</h2>
+                <p>
+                    Bem-vindo à Passo Certo! Somos apaixonados por oferecer calçados que unem conforto e estilo, ajudando você a dar o próximo passo com confiança. Nosso compromisso é proporcionar produtos de alta qualidade com preços acessíveis, sempre priorizando a sua satisfação. Explore nossas coleções e descubra a experiência única de caminhar com a <strong>Passo Certo – Seu próximo passo, sempre com conforto e estilo!</strong>
+                </p>
+            </div>
+            <br>
+
+            <!-- Campo de Pesquisa -->
+            <div class="search-bar">
+                <form action="/buscar" method="GET">
+                    <input type="text" name="q" placeholder="Buscar produtos...">
+                    <button type="submit">
+                        <img src=".\imgs\lupa.png" alt="Buscar" class="lupa-icon">
+                    </button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!--Seção Principal-->
+    <main>
+        <!--Banner Promocional-->
+        <section class="banner">
+            <div class="banner-conteudo">
+                <img src=".\imgs\Banner.png" alt="Banner Promocional" class="banner-imagem">
+                <p class="slogan">Seu próximo passo, sempre com conforto e estilo!</p>
+                <h1>Descontos de 20% em todos os nossos produtos!</h1>
+                <p>Confira nossas ofertas especiais, válidas por tempo limitado</p>
+                <a href="#produtos" class="btn">Ver Produtos</a>
+            </div>
+        </section>
+
+        <!--Produtos em Destaque-->
+        <section class="produtos-destaque" id="produtos">
+            <h2>Produtos em Destaque</h2>
+            <div class="produtos-grid">
+                
+                <!--Card dos produtos-->
+                <div class="produtos-card">
+                    <img src=".\imgs\Produto1.png" alt="Produto 1">
+                    <h3>Sapato Social Masculino</h3>
+                    <p class="preco">R$270,00</p>
+                    <p class="descricao">Um calçado formal, com design sofisticado.</p>
+                    <button class="btn">Adicionar ao carrinho</button>
+                </div>
+                <div class="produtos-card">
+                    <img src=".\imgs\Produto2.png" alt="Produto 2">
+                    <h3>Tênis Masculino</h3>
+                    <p class="preco">R$150,99</p>
+                    <p class="descricao">Projetado para absorver o impacto do pé no solo durante a corrida.</p>
+                    <button class="btn">Adicionar ao carrinho</button>
+                </div>
+                <div class="produtos-card">
+                    <img src=".\imgs\Produto3.png" alt="Produto 3">
+                    <h3>Sapatênis Masculino</h3>
+                    <p class="preco">R$180,90</p>
+                    <p class="descricao">Combina descontração com sofisticação.</p>
+                    <button class="btn">Adicionar ao carrinho</button>
+                </div>
+                <div class="produtos-card">
+                    <img src=".\imgs\Produto4.png" alt="Produto 4">
+                    <h3>Sapatênis Masculino</h3>
+                    <p class="preco">R$200,00</p>
+                    <p class="descricao">Combina descontração com sofisticação.</p>
+                    <button class="btn">Adicionar ao carrinho</button>
+                </div>
+                <div class="produtos-card">
+                    <img src=".\imgs\Produto5.png" alt="Produto 5">
+                    <h3>Sapatênis Masculino</h3>
+                    <p class="preco">R$290,90</p>
+                    <p class="descricao">Estilo, conforto e resistência.</p>
+                    <button class="btn">Adicionar ao carrinho</button>
+                </div>
+                <div class="produtos-card">
+                    <img src=".\imgs\Produto6.png" alt="Produto 6">
+                    <h3>Sapatênis Masculino</h3>
+                    <p class="preco">R$210,90</p>
+                    <p class="descricao">Combina descontração com sofisticação.</p>
+                    <button class="btn">Adicionar ao carrinho</button>
+                </div>
+                <div class="produtos-card">
+                    <img src=".\imgs\Produto7.png" alt="Produto 7">
+                    <h3>Tênis All Star</h3>
+                    <p class="preco">R$240,90</p>
+                    <p class="descricao">Um calçado versátil e atemporal.</p>
+                    <button class="btn">Adicionar ao carrinho</button>
+                </div>
+                <div class="produtos-card">
+                    <img src=".\imgs\Produto8.png" alt="Produto 8">
+                    <h3>Tênis All Star</h3>
+                    <p class="preco">R$240,90</p>
+                    <p class="descricao">um calçado versátil e atemporal.</p>
+                    <button class="btn">Adicionar ao carrinho</button>
+                </div>
+                <div class="produtos-card">
+                    <img src=".\imgs\Produto9.png" alt="Produto 9">
+                    <h3>Tênis Masculino</h3>
+                    <p class="preco">R$150,99</p>
+                    <p class="descricao">Projetado para absorver o impacto do pé no solo durante a corrida.</p>
+                    <button class="btn">Adicionar ao carrinho</button>
+                </div>
+                <div class="produtos-card">
+                    <img src=".\imgs\Produto10.png" alt="Produto 10">
+                    <h3>Sapatênis Masculino</h3>
+                    <p class="preco">R$180,90</p>
+                    <p class="descricao">Combina descontração com sofisticação.</p>
+                    <button class="btn">Adicionar ao carrinho</button>
+                </div>
+                <div class="produtos-card">
+                    <img src=".\imgs\Produto11.png" alt="Produto 11">
+                    <h3>Bota Casual</h3>
+                    <p class="preco">R$280,90</p>
+                    <p class="descricao">Conforto e praticidade.</p>
+                    <button class="btn">Adicionar ao carrinho</button>
+                </div>
+                <div class="produtos-card">
+                    <img src=".\imgs\Produto12.png" alt="Produto 12">
+                    <h3>Bota Casual</h3>
+                    <p class="preco">R$280,90</p>
+                    <p class="descricao">Conforto e praticidade.</p>
+                    <button class="btn">Adicionar ao carrinho</button>
+                </div>
+            </div>
+        </section>
+        
+        <!--Filtros de Busca-->
+        <section class="filtros">
+            <h2>Filtrar Produtos</h2>
+            <br>
+            <form>
+                <label for="categoria">Categoria:</label>
+                <select name="categoria" id="categoria">
+                    <option value="sapatos sociais">Sapatos Sociais</option>
+                    <option value="tênis casuais">Tênis casuais</option>
+                    <option value="tênis de corrida">Tênis de Corrida</option>
+                    <option value="sapatênis">Sapatênis</option>
+                    <option value="botas">Botas</option>
+                </select>
+
+                <label for="faixa-preço">Faixa de preço:</label>
+                <input type="text" id="faixa-preço" name="faixa-preço" min="0" max="1000">
+                
+                <button type="submit" class="btn">Aplicar Filtros</button>
+            </form>
+        </section>
+    </main>
+    
+</body>
+
+<br>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-columns">
+            <!-- Coluna 1: Contato -->
+            <div class="footer-column">
+                <address>
+                    <p>
+                        <div class="icon-texto">
+                        <img src=".\imgs\email.png" alt="Ícone de E-mail" class="email-icon">
+                        <a href="mailto:passocerto@gmail.com">passocerto@gmail.com</a>
+                        </div>
+                    </p>
+                    <p>
+                        <div class="icon-texto">
+                            <img src=".\imgs\whatsapp.png" alt="Ícone do Whatsapp" class="whatsapp-icon">
+                            <a href="https://wa.me/5511986852219" target="_blank">(11)98685-2219</a>
+                        </div>
+                    </p>
+                    <p>
+                        <div class="icon-texto">
+                            <img src=".\imgs\telefone.png" alt="Ícone do Telefone" class="telefone-icon">
+                            <a href="tel:+551134795555">(11)3479-5555</a>
+                        </div>
+                    </p>
+                </address>
+            </div>
+
+            <!-- Coluna 2: Endereço -->
+            <div class="footer-column">
+                <address>
+                    <p>
+                        <img src=".\imgs\local.png" alt="Ícone do local" class="local-icon">
+                        Rua das Bandeiras, nº 24<br>
+                        Bairro: Capela/SP
+                    </p>
+                </address>
+            </div>
+        </div>
+
+        <br>
+        <!-- Copyright -->
+        <p class="footer-copyright">
+            &copy; 2024/11 - Capacita Brasil. Todos os direitos reservados ao Passo Certo.
+        </p>
+    </div>
+</footer>
+
+</html>

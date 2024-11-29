@@ -1,0 +1,469 @@
+/** Header **/
+
+.header {
+    background-color: #D8D9D7;
+    display: flex;                              /*Organiza o layout dos itens*/
+    align-items: center;                        /*Os itens sao alinhados verticalmente no centro*/
+    justify-content: space-between;             /*Os itens sao dispostos horizontalmente*/
+    padding: 10px 20px;                         /*Espaçamento interno*/
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);   
+    border-radius: 15px;
+}
+
+.sobre {
+    text-align: center;
+    color: #102426; 
+    margin: 10px 0;     /*Margem acima e abaixo da secao*/
+    line-height: 1.6;   /*Espacamento entre as linhas do texto*/
+}
+
+.sobre h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #8C331F;
+    margin-bottom: 8px;
+}
+
+.sobre p {
+    font-size: 16px;
+    color: #102426;
+}
+
+
+/* Footer */
+
+.footer {
+    background-color: #D8D9D7;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.footer-columns {
+    display: flex;                      /*Os itens sao alinhados verticalmente no centro*/
+    justify-content: space-between;     /*Os itens sao dispostos horizontalmente*/
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer-column {
+    flex: 1;                        /*Em um container flex as colunas ocupam um espaco igual*/
+    margin: 0 10px;                 /*Margem horixontal entre as colunas*/
+    align-items: center;
+    flex-direction: column;         /*Os itens sao organizados verticalmente*/
+}
+
+.footer-column address {
+    font-style: normal;
+    color: #8C331F;
+    text-align: center;
+}
+
+.footer-column a {
+    color: #8C331F;
+    text-decoration: none;          /*Remove o sublinhado padrao dos links*/
+    transition: color 0.3s;         /*Transicao para a mudanca de cor*/
+}
+
+.footer-column a:hover {
+    color: #102426;
+}
+
+.icon-texto {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+    justify-content: center;
+}
+
+.icon-texto img {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.footer-copyright {
+    font-size: 15px;
+    color: #D98977;
+}
+
+
+/** Logotipo **/
+
+.logo img {
+    max-height: 150px;
+    border-radius: 15px;
+}
+
+/** Barra de navegação **/
+
+.nav ul {
+    list-style: none;       
+    font-size: 20px;
+    margin: 0;              /*Remove as margens externas*/
+    padding: 0;             /*Remove o espacamento interno*/
+    display: flex;  
+    gap: 20px;              /*Espacamento entre os itens*/
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #102426;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
+    padding: 5px 10px;                          /*Espacamento interno ao link*/
+    border-radius: 5px;
+}
+
+.nav ul li a:hover {
+    color: #A63921;
+    transform: scale(1.05);                 /*O tamanho do link é aumentado*/
+}
+
+.nav ul li a.active {
+    color: #8C331F;
+    border-bottom: 2px solid #8C331F;   /*Uma linha é adicionada a parte inferior do link ativo*/
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.search-bar input {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid #D8D9D7;
+    border-radius: 4px;
+}
+
+.search-bar button {
+    color: #D8D9D7;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-bar button img.lupa-icon {
+    width: 10px;
+    height: 10px;
+}
+
+
+/** Icones **/
+.email-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.whatsapp-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.telefone-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.local-icon {
+    width: 20px;
+    height: 20px;
+}
+
+
+/** Banner Promocional **/
+
+.banner {
+    color: #102426;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.banner-conteudo h1 {
+    font-size: 40px;
+}
+
+.banner-conteudo p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.banner-conteudo .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #A63921;
+    color: #D8D9D7;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background color 0.3s ease, transform 0.2s ease;
+}
+
+.banner-conteudo .btn:hover {
+    background-color: #8C331F;
+    transform: translateY(-1px);
+}
+
+.banner-conteudo .btn:active {
+    background-color: #A63921;
+    transform: translateY(1px);
+}
+
+.banner-imagem {
+    max-width: 85%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.banner-conteudo .slogan {
+    font-size: 20px;
+    color: #102426;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+
+/** Produtos em Destaque **/
+
+.produtos-destaque {
+    padding: 40px 30px;
+    text-align: center;
+}
+
+.produtos-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #102426;
+}
+
+.produtos-card {
+    border: 1px solid #D8D9D7;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.produtos-card img {
+    max-width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.produtos-card h3 {
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+.produtos-card .preco {
+    color: #102426;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.produtos-card .btn {
+    background-color: #A63921;
+    color: #D8D9D7;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 5px;
+    margin-top: auto;
+    transition: background color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.produtos-card .btn:hover {
+    background-color: #8C331F;
+    transform: translateY(-1px);
+}
+
+.produtos-card .btn:active {
+    background-color: #A63921;
+    transform: translateY(1px);
+}
+
+
+/** Filtros **/
+
+.filtros {
+    padding: 20px;
+    font-size: 20px;
+    color: #102426;
+    background-color: #D8D9D7;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.filtros form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.filtros label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.filtros select, .filtros input[type="text"] {
+    font-size: 16px;
+    padding: 8px;
+    border: 1px solid #102426;
+    border-radius: 5px;
+    background-color: #D8D9D7;
+    color: #102426;
+    min-width: 200px;
+}
+
+.filtros select:focus, .filtros input[type="text"]:focus {
+    border-color: #A63921;
+    outline: none;
+}
+
+.filtros .btn {
+    background-color: #A63921;
+    color: #D8D9D7;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background color 0.3s ease, transform 0.2s ease;
+}
+
+.filtros .btn:hover {
+    background-color: #8C331F;
+    transform: translateY(-1px);
+}
+
+.filtros .btn:active {
+    background-color: #A63921;
+    transform: translateY(1px);
+}
+
+
+
+/* Responsividade */
+
+@media (max-width: 1024px) {
+    
+    .header, .footer {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .footer-columns {
+        flex-direction: column; 
+        gap: 20px;
+    }
+
+    .nav ul {
+        flex-wrap: wrap; 
+        justify-content: center; 
+        gap: 10px;
+    }
+
+    .produtos-grid {
+        justify-content: center; 
+        gap: 15px;
+    }
+
+    .produtos-card {
+        max-width: 150px; 
+    }
+}
+
+@media (max-width: 768px) {
+    
+    .header {
+        padding: 10px; 
+    }
+
+    .nav ul {
+        flex-direction: column; 
+        gap: 10px;
+    }
+
+    .banner {
+        padding: 20px 10px; 
+    }
+
+    .banner-conteudo h1 {
+        font-size: 30px; 
+    }
+
+    .banner-conteudo p {
+        font-size: 16px;
+    }
+
+    .produtos-card {
+        max-width: 100%; 
+        flex: 1; 
+    }
+
+    .filtros {
+        padding: 15px;
+    }
+
+    .filtros form {
+        flex-direction: column; 
+        gap: 10px;
+    }
+
+    .search-bar {
+        flex-direction: column; 
+        gap: 5px;
+    }
+
+    .search-bar input {
+        width: 100%; 
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .produtos-destaque {
+        padding: 20px 10px;
+    }
+
+    .produtos-grid {
+        flex-direction: column; 
+    }
+
+    .produtos-card {
+        max-width: 100%; 
+        padding: 10px; 
+    }
+
+    .banner-conteudo h1 {
+        font-size: 24px;
+    }
+
+    .banner-conteudo p {
+        font-size: 14px;
+    }
+
+    .filtros select, .filtros input[type="text"] {
+        min-width: 100%; 
+    }
+
+    .footer-columns {
+        text-align: center;
+    }
+
+    .footer-column {
+        margin: 10px 0; 
+    }
+}
