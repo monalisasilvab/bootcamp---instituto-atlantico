@@ -1,229 +1,313 @@
+/* Variables */
+:root {
+    /* Tons de Azul */
+    --blue-light: #ADD8E6; /* Azul claro */
+    --blue-sky: #87CEEB; /* Azul céu */
+    --blue-cornflower: #6495ED; /* Azul flor de milho */
+    --blue-royal: #4169E1; /* Azul real */
+    --blue-dark: #1E3A8A; /* Azul escuro */
+
+    /* Tons de Cinza */
+    --gray-lightest: #F7F7F7; /* Cinza quase branco */
+    --gray-light: #D3D3D3; /* Cinza claro */
+    --gray-medium: #A9A9A9; /* Cinza médio */
+    --gray-dark: #696969; /* Cinza escuro */
+    --gray-darkest: #2F4F4F; /* Cinza quase preto */
+
+    --primary: var(--blue-cornflower);
+    --business: var(--blue-royal);
+    --personal: var(--blue-light);
+    --others: var(--blue-dark);
+
+    --light: var(--gray-lightest);
+    --grey: var(--gray-medium);
+    --dark: var(--gray-darkest);
+    --danger: var(--blue-dark);
+
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+    --business-glow: 0px 0px 4px rgba(65, 105, 225, 0.75);
+    --personal-glow: 0px 0px 4px rgba(173, 216, 230, 0.75);
+    --others-glow: 0px 0px 4px rgba(30, 58, 138, 0.75);
+}
+/* End of Variables */
+
+/* Resets */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'montserrat', sans-serif;
 }
+
+input:not([type="radio"]):not([type="checkbox"], button) {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: initial;
+}
+/* End of Resets */
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f4f8;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+	flex-direction: column;
+	min-height: 100vh;
+	margin: 0;
+	background: var(--light);
+    color: var(--dark);
 }
 
-.todo-container {
-    background: #ffffff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 500px;
-    text-align: center;
+
+main {
+	flex: 1;
 }
 
-h1 {
-    color: #2c3e50;
-    margin-bottom: 16px;
+section {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 
-form {
+h3 {
+    color: var(--dark);
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+h4 {
+    color: var(--grey);
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.greeting .title {
     display: flex;
-    gap: 8px;
-    margin-bottom: 16px;
 }
 
-input[type="text"] {
-    flex: 1;
-    padding: 8px;
-    border: 2px solid #d6dfe6;
-    border-radius: 4px;
-    color: #2c3e50;
+.greeting .title input {
+    margin-left: 0.5rem;
+    flex: 1 1 0%;
+    min-width: 0;
 }
 
-input[type="date"] {
-    padding: 8px;
-    border: 2px solid #d6dfe6;
-    border-radius: 4px;
+.greeting .title, 
+.greeting .title input {
+    color: var(--dark);
+    font-size: 1.5rem;
+    font-weight: 700;   
 }
 
-button {
-    padding: 8px 16px;
-    border: none;
-    background-color: #2980b9;
-    color: #ffffff;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #2471a3;
-}
-    
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    background: #f9f9f9;
-    margin-bottom: 8px;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    animation: fadeIn 0.3s ease; /* Animação ao adicionar */
-}
-
-li.completed {
-    text-decoration: line-through;
-    color: #7f8c8d;
-}
-
-li.removing {
-    animation: fadeOut 0.3s ease; /* Animação ao remover */
-    pointer-events: none; /* Desativa interações durante a animação */
-}
-
-span {
-    font-size: 16px;
-}
-
-li span {
-    flex: 1;
-    display: inline-block;
-    margin-right: 16px;
-}
-
-.task-buttons button {
-    margin-left: 8px;
-    padding: 0.3rem 0.7rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.task-buttons .complete {
-    background-color: #2980b9;
-    color: white;
-}
-
-.task-buttons .complete:hover {
-    background-color: #2471a3;
-}
-
-.task-buttons .delete {
-    background-color: #95a5a6;
-    color: white;
-}
-
-.task-buttons .delete:hover {
-    background-color: #7f8c8d;
-}
-
-#progress-bar-container {
-    margin-top: 8px;
+.create-todo input[type="text"] {
+    display: block;
     width: 100%;
-    height: 10px;
-    background-color: #d6dfe6; /* Cinza claro para a barra de fundo */
-    border-radius: 5px;
-    overflow: hidden;
+    font-size: 1.125rem;
+    padding: 1rem 1.5rem;
+    color: var(--dark);
+    background-color: #FFF;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
 }
 
-/* Barra de progresso - estilos básicos */
-#progress-bar {
-    width: 0%;
-    height: 100%;
-    background-color: #2980b9;
-    transition: width 0.3s ease, background-color 0.3s ease; /* Transição suave para largura e cor */
-    border-radius: 5px;
+
+.create-todo .options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    margin-bottom: 1.5rem;
 }
 
-#task-summary {
-    font-size: 16px;
-    margin-top: 16px;
-}
-
-#task-summary span.total {
-    color: #2c3e50; /* Cor padrão para o total de tarefas */
-    font-weight: bold;
-}
-
-#task-summary span.completed {
-    color: #2980b9; /* Verde para tarefas concluídas */
-    font-weight: bold;
-}
-
-#reset-progress {
-    margin-top: 16px;
-    margin-bottom: 16px;
-    padding: 8px 16px;
-    border: none;
-    background-color: #95a5a6;
-    color: white;
-    border-radius: 4px;
+.create-todo .options label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFF;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    border-radius: 0.5rem;
     cursor: pointer;
-    opacity: 1; /* Visível inicialmente */
-    visibility: visible; /* Garantir que esteja visível */
-    transition: opacity 0.5s ease, visibility 0.5s ease; /* Transição suave */
 }
 
-#reset-progress:hover {
-    background-color: #7f8c8d; 
+input[type="radio"],
+input[type="checkbox"] {
+    display: none;
 }
 
-#reset-progress.hidden {
-    opacity: 0; /* Torna invisível gradualmente */
-    visibility: hidden; /* Remove a visibilidade após o fade */
+.bubble {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 999px;
+    border: 2px solid var(--business);
+    box-shadow: var(--business-glow);
 }
 
-.error {
-    color: #7f8c8d; /* Vermelho para indicar erro */
-    font-size: 0.9rem;
-    margin-top: 8px;
-    visibility: hidden; /* Inicialmente escondido */
+.bubble.personal {
+    border-color: var(--personal);
+    box-shadow: var(--personal-glow);
 }
 
-.error.visible {
-    visibility: visible; /* Exibe quando houver erro */
+.bubble::after {
+    content: '';
+    display: block;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    background-color: var(--business);
+    box-shadow: var(--business-glow);
+    border-radius: 999px;
+    transition: 0.2s ease-in-out;
 }
 
-/* Cores baseadas no progresso */
-.low-progress {
-    background-color: #95a5a6; 
+.bubble.personal::after {
+    background-color: var(--personal);
+    box-shadow: var(--personal-glow);
 }
 
-.medium-progress {
-    background-color: #2980b9; 
+.bubble.others {
+    border-color: var(--others);
+    box-shadow: var(--others-glow);
 }
 
-.high-progress {
-    background-color: #2471a3; 
+.bubble.others::after {
+    background-color: var(--others);
+    box-shadow: var(--others-glow);
 }
 
-
-/* Animação ao adicionar uma tarefa */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+input:checked ~ .bubble::after {
+    width: 10px;
+    height: 10px;
+    opacity: 1;
 }
 
-/* Animação ao remover uma tarefa */
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    to {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
+.create-todo .options label div {
+    color: var(--dark);
+    font-size: 1.125rem;
+    margin-top: 1rem;
+}
+
+.create-todo input[type="submit"] {
+    display: block;
+    width: 100%;
+    font-size: 1.125rem;
+    padding: 1rem 1.5rem;
+    color: #FFF;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: var(--primary);
+    box-shadow: var(--personal-glow);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.2s ease-out;
+}
+
+.create-todo input[type="submit"]:hover {
+    opacity: 0.75;
+}
+
+.todo-list .list {
+    margin: 1rem 0;
+}
+
+.todo-list .todo-item {
+    display: flex;
+    align-items: center;
+    background-color: #FFF;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 1rem;
+}
+
+.todo-item label {
+    display: block;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.todo-item .todo-content {
+    flex: 1 1 0%;
+}
+
+.todo-item .todo-content input {
+    color: var(--dark);
+    font-size: 1.125rem;
+}
+
+.todo-item .actions {
+    display: flex;
+    align-items: center;
+}
+
+.todo-item .actions button {
+    display: block;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    color: #FFF;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.todo-item .actions button:hover {
+    opacity: 0.75;
+}
+
+.todo-item .actions .edit {
+    margin-right: 0.5rem;
+    background-color: var(--primary);
+}
+
+.todo-item .actions .delete {
+    background-color: var(--danger);
+}
+
+.todo-item.done .todo-content input {
+    text-decoration: line-through;
+    color: var(--grey);
+}
+
+.icon-button {
+	width: 20px; /* Ajuste do tamanho */
+	height: 20px;
+	cursor: pointer;
+	margin: 0 5px; /* Espaçamento */
+	
+}
+
+.icon-button:hover {
+	opacity: 0.8; /* Efeito ao passar o mouse */
+}
+
+/* Footer */
+
+.app-footer {
+	background-color: var(--gray-lightest);
+	color: var(--grey);
+	text-align: center;
+	padding: 16px 0;
+	margin-top: auto;
+	box-shadow: var(--shadow);
+}
+
+.app-footer .footer-content p {
+	margin: 8px 0;
+	font-size: 0.875rem;;
+}
+
+.app-footer .footer-content a {
+	color: var(--blue-sky);
+	text-decoration: none;
+	font-weight: bold;
+	transition: color 0.2s ease-in-out;
+}
+
+.app-footer .footer-content a:hover {
+	color: var(--blue-royal)
 }

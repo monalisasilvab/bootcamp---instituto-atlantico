@@ -1,28 +1,86 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Tarefas</title>
-    <link rel="stylesheet" href="styles.css">
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>My To Do List</title>
+	<!-- CSS Import -->
+	<link rel="stylesheet" href="styles.css" />
+	<!-- End of CSS Import -->
+	<!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- End of Fonts -->
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
 </head>
 <body>
-    <div class="todo-container">
-        <h1>To Do List</h1>
-        <form id="task-form">
-            <input type="text" id="task-input" placeholder="Digite sua tarefa..." required>
-            <input type="date" id="task-date" required>
-            <button type="submit">Adicionar</button>
-        </form>
-        <p id="error-message" class="error hidden"></p>
-        <button id="toggle-order">Ordenar: Ascendente</button>
-        <div id="task-summary">Total: 0 | Concluídas: 0</div>
-        <div id="progress-bar-container">
-            <div id="progress-bar"></div>
+	<!-- App Wrapper -->
+	<main class="app">
+		<!-- Greeting -->
+		<section class="greeting">
+			<h2 class="title">
+			    <input type="date" id="name" />
+			</h2>
+		</section>
+		<!-- End of Greeting -->
+		
+		<!-- New Todo -->
+		<section class="create-todo">
+			<h3>TO DO LIST</h3>
+			<form id="new-todo-form">
+				
+				<input 
+					type="text" 
+					placeholder="e.g. Buy new clothes"
+					name="content"
+					id="content" />
+				
+				<h4>Categoria</h4>
+				<div class="options">
+					<label>
+						<input type="radio" name="category" id="category1" value="business" /> 
+						<span class="bubble business"></span>
+						<div>Business</div>
+					</label>
+					<label>
+						<input type="radio" name="category" id="category2" value="personal" />
+						<span class="bubble personal"></span>
+						<div>Personal</div>
+					</label>
+					<label>
+						<input type="radio" name-="category" id="category3" value="others" />
+						<span class="bubble others"></span>
+						<div>Others</div>
+					</label>
+				</div>
+
+				<input type="submit" value="Adicionar tarefa" />
+			</form>
+		</section>
+		<!-- End of New Todo -->
+
+		<!-- Todo List -->
+		<section class="todo-list">
+			<h3>TASKS</h3>
+			<div class="list" id="todo-list"></div>
+		</section>
+		<!-- End of Todo List -->
+
+	</main>
+	<!-- End of App Wrapper -->
+
+	<!-- JS Import -->
+	<script src="script.js"></script>
+	<!-- End of JS Import -->
+
+    <footer class="app-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 My To Do List - <a href="https://github.com/monalisasilvab" target="_blank">Monalisa Silva</a></p>
         </div>
-        <button id="reset-progress">Resetar Progresso</button>    
-        <ul id="task-list"></ul>
-    </div>
-    <script src="script.js"></script>
+    </footer>
 </body>
 </html>
