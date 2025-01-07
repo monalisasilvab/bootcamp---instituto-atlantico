@@ -1,66 +1,54 @@
 /* Variables */
+
 :root {
-    /* Tons de Azul */
     --blue-light: #ADD8E6; /* Azul claro */
     --blue-sky: #87CEEB; /* Azul céu */
     --blue-cornflower: #6495ED; /* Azul flor de milho */
     --blue-royal: #4169E1; /* Azul real */
     --blue-dark: #1E3A8A; /* Azul escuro */
 
-    /* Tons de Cinza */
     --gray-lightest: #F7F7F7; /* Cinza quase branco */
     --gray-light: #D3D3D3; /* Cinza claro */
     --gray-medium: #A9A9A9; /* Cinza médio */
     --gray-dark: #696969; /* Cinza escuro */
     --gray-darkest: #2F4F4F; /* Cinza quase preto */
-
+    
     --primary: var(--blue-cornflower);
-    --business: var(--blue-royal);
-    --personal: var(--blue-light);
-    --others: var(--blue-dark);
+    --business: var(--blue-dark);
+    --personal: var(--blue-royal);
 
     --light: var(--gray-lightest);
     --grey: var(--gray-medium);
     --dark: var(--gray-darkest);
-    --danger: var(--blue-dark);
+    --danger: var(--gray-dark);
 
     --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
     --business-glow: 0px 0px 4px rgba(65, 105, 225, 0.75);
     --personal-glow: 0px 0px 4px rgba(173, 216, 230, 0.75);
-    --others-glow: 0px 0px 4px rgba(30, 58, 138, 0.75);
 }
-/* End of Variables */
 
-/* Resets */
+
+/* General Styles */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'montserrat', sans-serif;
+    font-family: 'montserrat', 'lato';
 }
-
-input:not([type="radio"]):not([type="checkbox"], button) {
-    appearance: none;
-    border: none;
-    outline: none;
-    background: none;
-    cursor: initial;
-}
-/* End of Resets */
 
 body {
     display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-	margin: 0;
-	background: var(--light);
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background: var(--light);
     color: var(--dark);
 }
 
-
 main {
-	flex: 1;
+    flex: 1;
 }
 
 section {
@@ -69,6 +57,9 @@ section {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
 }
+
+
+/* Headings */
 
 h3 {
     color: var(--dark);
@@ -84,59 +75,40 @@ h4 {
     margin-bottom: 0.5rem;
 }
 
+
+/* Greeting Section */
+
 .greeting .title {
     display: flex;
 }
 
-.greeting .title input {
-    margin-left: 0.5rem;
-    flex: 1 1 0%;
-    min-width: 0;
+
+/* Form Inputs */
+
+input:not([type="radio"]):not([type="checkbox"], button) {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: initial;
 }
 
-.greeting .title, 
-.greeting .title input {
-    color: var(--dark);
-    font-size: 1.5rem;
-    font-weight: 700;   
-}
-
-.create-todo input[type="text"] {
-    display: block;
-    width: 100%;
+.create-todo .input-group input {
+    flex: 1;
     font-size: 1.125rem;
     padding: 1rem 1.5rem;
     color: var(--dark);
     background-color: #FFF;
     border-radius: 0.5rem;
     box-shadow: var(--shadow);
-    margin-bottom: 1.5rem;
 }
 
-
-.create-todo .options {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-.create-todo .options label {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #FFF;
-    padding: 1.5rem;
-    box-shadow: var(--shadow);
-    border-radius: 0.5rem;
-    cursor: pointer;
-}
-
-input[type="radio"],
-input[type="checkbox"] {
+input[type="radio"], input[type="checkbox"] {
     display: none;
 }
+
+
+/* Bubble Styles */
 
 .bubble {
     display: flex;
@@ -166,25 +138,37 @@ input[type="checkbox"] {
     transition: 0.2s ease-in-out;
 }
 
+input:checked ~ .bubble::after {
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+}
+
 .bubble.personal::after {
     background-color: var(--personal);
     box-shadow: var(--personal-glow);
 }
 
-.bubble.others {
-    border-color: var(--others);
-    box-shadow: var(--others-glow);
+
+/* Create Todo Section */
+
+.create-todo .options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    margin-bottom: 1.5rem;
 }
 
-.bubble.others::after {
-    background-color: var(--others);
-    box-shadow: var(--others-glow);
-}
-
-input:checked ~ .bubble::after {
-    width: 10px;
-    height: 10px;
-    opacity: 1;
+.create-todo .options label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFF;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    border-radius: 0.5rem;
+    cursor: pointer;
 }
 
 .create-todo .options label div {
@@ -212,6 +196,16 @@ input:checked ~ .bubble::after {
     opacity: 0.75;
 }
 
+.create-todo .input-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+
+/* Todo List Section */
+
 .todo-list .list {
     margin: 1rem 0;
 }
@@ -233,7 +227,7 @@ input:checked ~ .bubble::after {
 }
 
 .todo-item .todo-content {
-    flex: 1 1 0%;
+    flex: 1;
 }
 
 .todo-item .todo-content input {
@@ -249,7 +243,7 @@ input:checked ~ .bubble::after {
 .todo-item .actions button {
     display: block;
     padding: 0.5rem;
-    border-radius: 0.25rem;
+    border-radius: 0.30rem;
     color: #FFF;
     cursor: pointer;
     transition: 0.2s ease-in-out;
@@ -273,41 +267,48 @@ input:checked ~ .bubble::after {
     color: var(--grey);
 }
 
-.icon-button {
-	width: 20px; /* Ajuste do tamanho */
-	height: 20px;
-	cursor: pointer;
-	margin: 0 5px; /* Espaçamento */
-	
-}
-
-.icon-button:hover {
-	opacity: 0.8; /* Efeito ao passar o mouse */
-}
 
 /* Footer */
 
 .app-footer {
-	background-color: var(--gray-lightest);
-	color: var(--grey);
-	text-align: center;
-	padding: 16px 0;
-	margin-top: auto;
-	box-shadow: var(--shadow);
+    background-color: var(--gray-lightest);
+    color: var(--grey);
+    text-align: center;
+    padding: 16px 0;
+    margin-top: auto;
+    box-shadow: var(--shadow);
 }
 
 .app-footer .footer-content p {
-	margin: 8px 0;
-	font-size: 0.875rem;;
+    margin: 8px 0;
+    font-size: 0.875rem;;
 }
 
 .app-footer .footer-content a {
-	color: var(--blue-sky);
-	text-decoration: none;
-	font-weight: bold;
-	transition: color 0.2s ease-in-out;
+    color: var(--blue-sky);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease-in-out;
 }
 
 .app-footer .footer-content a:hover {
-	color: var(--blue-royal)
+    color: var(--blue-royal)
+}
+
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+    .create-todo .options {
+        grid-template-columns: 1fr; 
+    }
+
+    .todo-item {
+        flex-direction: column; 
+        align-items: flex-start;
+    }
+
+    .todo-item .actions {
+        margin-top: 1rem; 
+    }
 }
