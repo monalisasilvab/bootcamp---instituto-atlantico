@@ -9,7 +9,6 @@ window.addEventListener('load', () => {
 			content: e.target.elements.content.value,
 			category: e.target.elements.category.value,
 			done: false,
-			createdAt: new Date().getTime()
 		}
 
 		todos.push(todo);
